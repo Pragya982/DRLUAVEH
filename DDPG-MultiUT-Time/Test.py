@@ -21,8 +21,8 @@ while True:
     obs, rewards, dones, info = env.step(action)
     info = list(info)[0]
 
-    harvestEnergy = np.float(info.split(",")[0])
-    receivedEnergy = np.float(info.split(",")[1])
+    harvestEnergy = float(info.split(",")[0])
+    receivedEnergy = float(info.split(",")[1])
     Rewards.append(rewards)
     Harvest.append(harvestEnergy)
     Received.append(receivedEnergy)
